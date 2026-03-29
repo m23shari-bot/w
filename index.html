@@ -1,1 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PeakClimber AI - Revolutionary autonomous mountain-climbing robot with advanced AI navigation, extreme terrain capabilities, and life-saving applications in rescue operations.">
+    <meta name="keywords" content="AI Robotics, Mountain Rescue Tech, Climbing Robots, Autonomous Robots, AI Navigation, Rescue Robotics, Industrial Inspection Robots, Terrain Mapping">
+    <meta name="author" content="PeakClimber AI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="PeakClimber AI | Autonomous Mountain Climbing Robot">
+    <meta property="og:description" content="Revolutionary AI-powered robot capable of autonomous climbing, rescue operations, and terrain exploration in extreme environments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://peakclimber.ai">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1535378437323-95e8e1d9a570?w=1200">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PeakClimber AI | Autonomous Mountain Climbing Robot">
+    <meta name="twitter:description" content="Revolutionary AI-powered robot capable of autonomous climbing, rescue operations, and terrain exploration.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1535378437323-95e8e1d9a570?w=1200">
+    
+    <title>PeakClimber AI | Autonomous Mountain Climbing Robot | Future of Rescue Robotics</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Font Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'tech-black': '#0A0A0A',
+                        'tech-dark': '#121212',
+                        'electric-blue': '#00D4FF',
+                        'matrix-green': '#32CD32',
+                        'glass': 'rgba(255, 255, 255, 0.05)',
+                        'glass-border': 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        'display': ['Orbitron', 'sans-serif'],
+                        'body': ['Rajdhani', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px #00D4FF, 0 0 10px #00D4FF' },
+                            '100%': { boxShadow: '0 0 20px #00D4FF, 0 0 30px #00D4FF' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #00D4FF, #32CD32);
+            border-radius: 4px;
+        }
+        
+        /* Glassmorphism Base */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .glass-form {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Neon Glow Effects */
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+        }
+        
+        .neon-border {
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.2), inset 0 0 15px rgba(0, 212, 255, 0.05);
+        }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #00BFFF, #00D4FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-cyan {
+            background: linear-gradient(90deg, #00BFFF, #00FFFF, #00D4FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Animated Background Grid */
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Card Hover Effects */
+        .feature-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: #00D4FF;
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.15);
+        }
+        
+        /* Button Hover Effects */
+        .btn-primary {
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        /* Table Styles */
+        .spec-table tr {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            transition: background 0.3s ease;
+        }
+        .spec-table tr:hover {
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        /* Image Overlay */
+        .image-overlay {
+            background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.95) 100%);
+        }
+        
+        /* Icon Glow */
+        .icon-glow {
+            filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+        }
+    </style>
+</head>
+<body class="bg-tech-black text-white font-body antialiased overflow-x-hidden">
+    
+    <!-- Animated Background Grid -->
+    <div class="fixed inset-0 grid-bg pointer-events-none z-0"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-card backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-electric-blue to-matrix-green flex items-center justify-center">
+                        <svg class="w-6 h-6 text-tech-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <span class="font-display text-xl font-bold tracking-wider">PeakClimber<span class="text-electric-blue">AI</span></span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-300 hover:text-electric-blue transition-colors duration-300 font-medium">Features</a>
+                    <a href="#specs" class="text-gray-300 hover:text-electric-blue transition-colors duration-300 font-medium">Specifications</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-electric-blue transition-colors duration-300 font-medium">Gallery</a>
+                    <a href="#contact" class="text-gray-300 hover:text-electric-blue transition-colors duration-300 font-medium">Contact</a>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#contact" class="btn-primary bg-gradient-to-r from-electric-blue to-matrix-green text-tech-black font-display font-bold px-6 py-2.5 rounded-lg hover:text-white">
+                    Pre-Order Now
+                </a>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20 z-10 overflow-hidden">
+        <!-- Hero Background Image - Mountain Peak with Dramatic Lighting -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1920&q=80" 
+                 alt="Majestic mountain peak at sunrise with dramatic clouds - PeakClimber AI operating environment" 
+                 class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-b from-tech-black/60 via-tech-black/50 to-tech-black"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 glass-card rounded-full px-4 py-2 mb-8 animate-slide-up">
+                <span class="w-2 h-2 rounded-full bg-matrix-green animate-pulse"></span>
+                <span class="text-electric-blue text-sm font-medium">Next-Generation Autonomous Climbing</span>
+            </div>
+            
+            <!-- Main Heading with Gradient -->
+            <h1 class="font-display text-5xl md:text-7xl font-black mb-6 leading-tight animate-slide-up">
+                <span class="block text-white">Conquer Every</span>
+                <span class="gradient-text-cyan">Vertical Frontier</span>
+            </h1>
+            
+            <!-- Subheading -->
+            <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed animate-slide-up">
+                PeakClimber AI represents the pinnacle of autonomous robotics—engineered to navigate the world's most challenging terrain with unprecedented speed and precision. From life-saving rescue operations to groundbreaking scientific exploration, the mountains no longer have limits.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up">
+                <a href="#contact" class="btn-primary bg-gradient-to-r from-electric-blue to-matrix-green text-tech-black font-display font-bold px-8 py-4 rounded-lg text-lg">
+                    Request Demo
+                </a>
+                <a href="#features" class="glass-card px-8 py-4 rounded-lg text-white font-medium hover:bg-white/10 transition-all duration-300 flex items-center space-x-2">
+                    <span>Explore Features</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-16 animate-slide-up">
+                <div class="text-center">
+                    <div class="font-display text-3xl md:text-4xl font-bold text-electric-blue">50m/min</div>
+                    <div class="text-gray-500 text-sm mt-1">Climbing Speed</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-3xl md:text-4xl font-bold text-matrix-green">12 Hours</div>
+                    <div class="text-gray-500 text-sm mt-1">Battery Life</div>
+                </div>
+                <div class="text-center">
+                    <div class="font-display text-3xl md:text-4xl font-bold text-electric-blue">5kg</div>
+                    <div class="text-gray-500 text-sm mt-1">Payload Capacity</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/4 left-10 w-72 h-72 bg-electric-blue/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-10 w-96 h-96 bg-matrix-green/10 rounded-full blur-3xl"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Revolutionary <span class="gradient-text">Capabilities</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    PeakClimber AI combines cutting-edge propulsion technology, intelligent AI navigation, and versatile payload systems to conquer any vertical challenge.
+                </p>
+            </div>
+            
+            <!-- Feature Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Feature 1: Extreme Speed -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-electric-blue to-blue-600 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">Extreme Speed</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Our patented multi-vector propulsion system delivers extraordinary vertical velocity. PeakClimber AI ascends at 50 meters per minute, dramatically reducing mission times compared to traditional climbing methods. The revolutionary gimbal-mounted thrusters provide consistent power across any terrain angle, from sheer rock faces to icy vertical walls.
+                    </p>
+                </div>
+                
+                <!-- Feature 2: AI Navigator -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-matrix-green to-green-600 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">AI Navigator</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Powered by advanced Neural Nav 4.0 and LiDAR sensing, PeakClimber AI creates real-time 3D terrain maps while identifying optimal climbing paths. The system processes environmental data at 100 frames per second, instantly calculating grip points and adjusting for loose rock, ice, or unexpected obstacles. True autonomy in the most challenging conditions.
+                    </p>
+                </div>
+                
+                <!-- Feature 3: Modular Payload -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">Modular Payload</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Adapt PeakClimber AI for any mission with our universal payload docking system. Deploy emergency medical supplies to stranded hikers, install scientific sensors for atmospheric research, or equip high-resolution cameras for geological surveys. The 5kg payload capacity supports a growing ecosystem of specialized modules designed for rescue, research, and industrial applications.
+                    </p>
+                </div>
+                
+                <!-- Feature 4: Autonomous Pathfinding -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white icon-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">Autonomous Pathfinding</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Advanced machine learning algorithms enable PeakClimber AI to analyze complex terrain in real-time and choose the optimal climbing route. The system continuously evaluates grip points, surface stability, and energy efficiency to find the fastest, safest path to the objective. No human intervention required for navigation.
+                    </p>
+                </div>
+                
+                <!-- Feature 5: All-Terrain Grip -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white icon-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">All-Terrain Grip</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Four independently articulated limbs with smart gripping technology adapt to any surface. From smooth granite to loose gravel, icy overhangs to crumbling masonry, PeakClimber AI maintains secure attachment through adaptive force distribution. Each limb contains 200 micro-grippers that automatically adjust to surface texture and angle.
+                    </p>
+                </div>
+                
+                <!-- Feature 6: 5kg Payload Capacity -->
+                <div class="feature-card glass-card rounded-2xl p-8">
+                    <div class="w-16 h-16 rounded-xl bg-gradient-to-br from-pink-500 to-pink-700 flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white icon-glow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl font-bold mb-4 text-white">5kg Payload Capacity</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        The integrated payload system supports up to 5 kilograms of mission-specific equipment. Standard mounting points accommodate emergency medical kits, environmental sensors, communication relays, and inspection cameras. Hot-swappable modules allow rapid reconfiguration between missions without tools.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Specifications -->
+    <section id="specs" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Content -->
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                        Engineered for <span class="gradient-text">Excellence</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Every component of PeakClimber AI has been meticulously designed and tested in extreme conditions. From high-altitude expeditions to industrial inspections, our specifications ensure reliable performance when it matters most.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-electric-blue"></div>
+                            <span class="text-gray-300">IP68 Weather Resistance</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-matrix-green"></div>
+                            <span class="text-gray-300">Autonomous Return-to-Base</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-electric-blue"></div>
+                            <span class="text-gray-300">12-Hour Continuous Operation</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-2 h-2 rounded-full bg-matrix-green"></div>
+                            <span class="text-gray-300">Neural Nav 4.0 AI System</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Specs Table -->
+                <div class="glass-card rounded-2xl p-8 neon-border">
+                    <h3 class="font-display text-2xl font-bold mb-6 text-electric-blue">Technical Specifications</h3>
+                    <table class="w-full spec-table">
+                        <tbody>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Climbing Speed</td>
+                                <td class="py-4 text-right font-semibold text-white">50 meters/minute</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Weight</td>
+                                <td class="py-4 text-right font-semibold text-white">15 kg</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Battery Life</td>
+                                <td class="py-4 text-right font-semibold text-white">12 hours / 6 hours active</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">AI System</td>
+                                <td class="py-4 text-right font-semibold text-white">Neural Nav 4.0</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Max Payload</td>
+                                <td class="py-4 text-right font-semibold text-white">5 kg</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Dimensions</td>
+                                <td class="py-4 text-right font-semibold text-white">75 × 40 × 25 cm</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Operating Temp</td>
+                                <td class="py-4 text-right font-semibold text-white">-40°C to +60°C</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Connectivity</td>
+                                <td class="py-4 text-right font-semibold text-white">5G / Satellite / WiFi</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Sensors</td>
+                                <td class="py-4 text-right font-semibold text-white">LiDAR + 4× Stereo Camera</td>
+                            </tr>
+                            <tr class="py-3">
+                                <td class="py-4 text-gray-400 font-medium">Water Resistance</td>
+                                <td class="py-4 text-right font-semibold text-white">IP68 Rated</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4">
+                    Visual <span class="gradient-text">Gallery</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+                    PeakClimber AI in action across diverse mountain environments and mission scenarios.
+                </p>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Gallery Item 1: Futuristic Robot -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1535378437323-95e8e1d9a570?w=800&q=80" 
+                             alt="Advanced humanoid robot with glowing blue eyes representing AI technology and autonomous systems" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-tech-black via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-4 relative -mt-12">
+                        <h4 class="font-display font-semibold text-white">AI Robotics Technology</h4>
+                        <p class="text-gray-400 text-sm">Advanced autonomous systems</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2: Mountain Cliff -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=800&q=80" 
+                             alt="Snow-covered mountain cliff with dramatic clouds - PeakClimber AI challenging terrain environment" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-tech-black via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-4 relative -mt-12">
+                        <h4 class="font-display font-semibold text-white">Extreme Terrain</h4>
+                        <p class="text-gray-400 text-sm">High-altitude operations</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3: Industrial Technology -->
+                <div class="glass-card rounded-2xl overflow-hidden group">
+                    <div class="aspect-[4/3] relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565514020176-db78c4734e17?w=800&q=80" 
+                             alt="Robotic arm and industrial automation technology - PeakClimber AI mechanical precision systems" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-tech-black via-transparent to-transparent opacity-80"></div>
+                    </div>
+                    <div class="p-4 relative -mt-12">
+                        <h4 class="font-display font-semibold text-white">Precision Engineering</h4>
+                        <p class="text-gray-400 text-sm">Mechanical gripping systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Glassmorphism -->
+    <section id="contact" class="py-24 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-form rounded-3xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <h2 class="font-display text-4xl font-bold mb-4">
+                        Partner With <span class="gradient-text">PeakClimber AI</span>
+                    </h2>
+                    <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+                        We're actively seeking strategic partners, research institutions, and enterprise clients to join us in revolutionizing autonomous mountain operations. Whether you're in search and rescue, scientific research, or industrial inspection, PeakClimber AI delivers results where others cannot reach.
+                    </p>
+                </div>
+                
+                <!-- Contact Form -->
+                <form class="space-y-6" id="contactForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-300 text-sm font-medium mb-2">Name</label>
+                            <input type="text" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-electric-blue focus:bg-white/15 transition-all duration-300" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label class="block text-gray-300 text-sm font-medium mb-2">Email</label>
+                            <input type="email" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-electric-blue focus:bg-white/15 transition-all duration-300" placeholder="email@company.com">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-300 text-sm font-medium mb-2">Organization</label>
+                        <input type="text" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-electric-blue focus:bg-white/15 transition-all duration-300" placeholder="Company or Institution name">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-300 text-sm font-medium mb-2">Message</label>
+                        <textarea rows="4" class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-electric-blue focus:bg-white/15 transition-all duration-300 resize-none" placeholder="Tell us about your project or partnership interest..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full bg-gradient-to-r from-electric-blue to-matrix-green text-tech-black font-display font-bold py-4 rounded-lg text-lg hover:opacity-90 transition-all duration-300 transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 relative z-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-electric-blue to-matrix-green flex items-center justify-center">
+                            <svg class="w-6 h-6 text-tech-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <span class="font-display text-xl font-bold">PeakClimber<span class="text-electric-blue">AI</span></span>
+                    </div>
+                    <p class="text-gray-500 max-w-md">
+                        Pioneering autonomous robotics for the world's most challenging terrain. Making the inaccessible accessible through AI-powered innovation.
+                    </p>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="font-display font-semibold mb-4 text-white">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#features" class="hover:text-electric-blue transition-colors">Features</a></li>
+                        <li><a href="#specs" class="hover:text-electric-blue transition-colors">Specifications</a></li>
+                        <li><a href="#gallery" class="hover:text-electric-blue transition-colors">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-electric-blue transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-display font-semibold mb-4 text-white">Get in Touch</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li>partnerships@peakclimber.ai</li>
+                        <li>support@peakclimber.ai</li>
+                        <li class="pt-2">
+                            <span class="text-sm">Operating globally from<br>Swiss Alps HQ</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-500 text-sm">© 2024 PeakClimber AI. All rights reserved.</p>
+                <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-electric-blue transition-colors">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-electric-blue transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Add visual feedback
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '✓ Message Sent!';
+            btn.classList.add('bg-matrix-green');
+            btn.classList.remove('from-electric-blue', 'to-matrix-green');
+            
+            // Reset after 3 seconds
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-matrix-green');
+                btn.classList.add('from-electric-blue', 'to-matrix-green');
+                this.reset();
+            }, 3000);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards with initial styles
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease-out';
+            observer.observe(card);
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg', 'bg-tech-black/90');
+            } else {
+                nav.classList.remove('shadow-lg', 'bg-tech-black/90');
+            }
+        });
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroSection = document.querySelector('.min-h-screen');
+            if (heroSection) {
+                heroSection.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+    </script>
+</body>
+                  </html>
